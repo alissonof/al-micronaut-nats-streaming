@@ -1,0 +1,30 @@
+dependencies {
+    annotationProcessor "io.micronaut:micronaut-inject-java"
+    annotationProcessor "io.micronaut.docs:micronaut-docs-asciidoc-config-props:$micronautDocsVersion"
+
+    api "io.micronaut:micronaut-messaging:$micronautVersion"
+    api "io.micronaut:micronaut-inject-java"
+    api "io.nats:java-nats-streaming:${natsVersion}"
+
+    compileOnly "io.micronaut.micrometer:micronaut-micrometer-core"
+    compileOnly "io.micronaut:micronaut-management"
+
+    testImplementation("org.spockframework:spock-core:${spockVersion}") {
+        exclude module:'groovy-all'
+    }
+    testImplementation "io.micronaut.test:micronaut-test-spock:$micronautTestVersion"
+    testImplementation "io.micronaut:micronaut-inject-groovy"
+    testImplementation "io.micronaut:micronaut-inject-java"
+    testImplementation "org.testcontainers:spock:1.15.2"
+    testImplementation "io.micronaut:micronaut-management"
+}
+
+test {
+    jvmArgs '-Duser.country=US'
+    jvmArgs '-Duser.language=en'
+    testLogging {
+        showStandardStreams = true
+        exceptionFormat = 'full'
+    }
+    failFast = true
+}
