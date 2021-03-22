@@ -18,8 +18,14 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.micronaut/micronaut-inject-java/2.3.3/eadf7dcbb2f7362378e04518240ed22f1a80ba46/micronaut-inject-java-2.3.3.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.spotbugs/spotbugs-annotations/4.0.3/755cc5d84d32b31beeaf8597181f0fc4eac98e16/spotbugs-annotations-4.0.3.jar" />
         </processorPath>
-        <module name="micronaut-nats-streaming.nats.main" />
+        <module name="it-micronaut-nats-streaming.nats.main" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="al-micronaut-nats-streaming.nats.main" target="1.8" />
+      <module name="al-micronaut-nats-streaming.nats.test" target="1.8" />
+      <module name="micronaut-nats-streaming.nats.main" target="1.8" />
+      <module name="micronaut-nats-streaming.nats.test" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
